@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/20220109.ChessPDFBrowser.v1.20.iml" filepath="$PROJECT_DIR$/.idea/20220109.ChessPDFBrowser.v1.20.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/chess/v1.20/ChessLibs.iml" filepath="$PROJECT_DIR$/_source/libs/chess/v1.20/ChessLibs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/apps/chess/v1.20/ChessPDFbrowser/ChessPDFbrowser.iml" filepath="$PROJECT_DIR$/_source/apps/chess/v1.20/ChessPDFbrowser/ChessPDFbrowser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/apps/chess/v1.20/ChessPDFbrowser-all.iml" filepath="$PROJECT_DIR$/_source/apps/chess/v1.20/ChessPDFbrowser-all.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/apps/chess/v1.20/ChessPDFbrowser_main/ChessPDFbrowser-main.iml" filepath="$PROJECT_DIR$/_source/apps/chess/v1.20/ChessPDFbrowser_main/ChessPDFbrowser-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/maindev/ChessPDFbrowser.v1.20-total/ChessPDFbrowser-maindev.iml" filepath="$PROJECT_DIR$/_source/maindev/ChessPDFbrowser.v1.20-total/ChessPDFbrowser-maindev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/3rd-party/PlatformLibs-3rd-party.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/3rd-party/PlatformLibs-3rd-party.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/gpl/3rd-party/PlatformLibs-3rd-party-gpl-dependencies.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/gpl/3rd-party/PlatformLibs-3rd-party-gpl-dependencies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/PlatformLibs-all.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/PlatformLibs-all.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/PlatformLibs-all-dependencies.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/PlatformLibs-all-dependencies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/gpl/PlatformLibs-gpl-dependencies.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/gpl/PlatformLibs-gpl-dependencies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/own/PlatformLibs-own.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/own/PlatformLibs-own.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/gpl/own/PlatformLibs-own-gpl-dependencies.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/gpl/own/PlatformLibs-own-gpl-dependencies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/gpl/3rd-party/java3d-core-1.7.0-pre1/j3dcore.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/gpl/3rd-party/java3d-core-1.7.0-pre1/j3dcore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/gpl/3rd-party/java3d-utils-1.7.0-pre1/j3dutils.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/gpl/3rd-party/java3d-utils-1.7.0-pre1/j3dutils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/gpl/own/lib3D/lib3D.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/gpl/own/lib3D/lib3D.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/own/lib3Dapi/lib3Dapi.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/own/lib3Dapi/lib3Dapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/chess/v1.20/libChess/libChess.iml" filepath="$PROJECT_DIR$/_source/libs/chess/v1.20/libChess/libChess.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/chess/v1.20/libChessBoardRecognition/libChessBoardRecognition.iml" filepath="$PROJECT_DIR$/_source/libs/chess/v1.20/libChessBoardRecognition/libChessBoardRecognition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/chess/v1.20/libChessEngineWrapper/libChessEngineWrapper.iml" filepath="$PROJECT_DIR$/_source/libs/chess/v1.20/libChessEngineWrapper/libChessEngineWrapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/own/libGeneric/libGeneric.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/own/libGeneric/libGeneric.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/own/libGenericCommandLine/libGenericCommandLine.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/own/libGenericCommandLine/libGenericCommandLine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/own/libGenericDesktop/libGenericDesktop.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/own/libGenericDesktop/libGenericDesktop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/3rd-party/libImageProcessing/libImageProcessing.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/3rd-party/libImageProcessing/libImageProcessing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/own/libInetQuery/libInetQuery.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/own/libInetQuery/libInetQuery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/gpl/own/libJerseyInetQuery/libJerseyInetQuery.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/gpl/own/libJerseyInetQuery/libJerseyInetQuery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/own/libPdf/libPdf.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/own/libPdf/libPdf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/chess/v1.20/libPdfInputElement/libPdfInputElement.iml" filepath="$PROJECT_DIR$/_source/libs/chess/v1.20/libPdfInputElement/libPdfInputElement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/gpl/own/libPdfboxWrapper/libPdfboxWrapper.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/gpl/own/libPdfboxWrapper/libPdfboxWrapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/3rd-party/libScreenImage/libScreenImage.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/3rd-party/libScreenImage/libScreenImage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/3rd-party/libTableColumnAdjuster/libTableColumnAdjuster.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/lgpl/3rd-party/libTableColumnAdjuster/libTableColumnAdjuster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/apps/chess/v1.20/pdf2pgn/pdf2pgn.iml" filepath="$PROJECT_DIR$/_source/apps/chess/v1.20/pdf2pgn/pdf2pgn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_source/libs/plat/v1.4/gpl/3rd-party/vecmath-1.7.0-pre1/vecmath.iml" filepath="$PROJECT_DIR$/_source/libs/plat/v1.4/gpl/3rd-party/vecmath-1.7.0-pre1/vecmath.iml" />
+    </modules>
+  </component>
+</project>

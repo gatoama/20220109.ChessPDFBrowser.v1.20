@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="libGeneric" />
+        <module name="ChessPDFbrowser" />
+        <module name="vecmath" />
+        <module name="pdf2pgn" />
+        <module name="libScreenImage" />
+        <module name="ChessPDFbrowser-main" />
+        <module name="libGenericDesktop" />
+        <module name="libPdf" />
+        <module name="libImageProcessing" />
+        <module name="libPdfInputElement" />
+        <module name="j3dutils" />
+        <module name="j3dcore" />
+        <module name="libChess" />
+        <module name="lib3Dapi" />
+        <module name="libJerseyInetQuery" />
+        <module name="libTableColumnAdjuster" />
+        <module name="lib3D" />
+        <module name="libGenericCommandLine" />
+        <module name="libPdfboxWrapper" />
+        <module name="libInetQuery" />
+        <module name="libChessBoardRecognition" />
+        <module name="libChessEngineWrapper" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ChessLibs" target="1.5" />
+      <module name="ChessPDFbrowser" target="1.8" />
+      <module name="ChessPDFbrowser-all" target="1.5" />
+      <module name="ChessPDFbrowser-main" target="1.8" />
+      <module name="ChessPDFbrowser-maindev" target="1.5" />
+      <module name="j3dcore" target="1.7" />
+      <module name="j3dutils" target="1.7" />
+      <module name="lib3D" target="1.8" />
+      <module name="lib3Dapi" target="1.8" />
+      <module name="libChess" target="1.8" />
+      <module name="libChessBoardRecognition" target="1.8" />
+      <module name="libChessEngineWrapper" target="1.8" />
+      <module name="libGeneric" target="1.8" />
+      <module name="libGenericCommandLine" target="1.8" />
+      <module name="libGenericDesktop" target="1.8" />
+      <module name="libImageProcessing" target="1.8" />
+      <module name="libInetQuery" target="1.8" />
+      <module name="libJerseyInetQuery" target="1.8" />
+      <module name="libPdf" target="1.8" />
+      <module name="libPdfboxWrapper" target="1.8" />
+      <module name="libPdfInputElement" target="1.8" />
+      <module name="libScreenImage" target="1.8" />
+      <module name="libTableColumnAdjuster" target="1.8" />
+      <module name="pdf2pgn" target="1.8" />
+      <module name="PlatformLibs-3rd-party" target="1.5" />
+      <module name="PlatformLibs-3rd-party-gpl-dependencies" target="1.5" />
+      <module name="PlatformLibs-all" target="1.5" />
+      <module name="PlatformLibs-all-dependencies" target="1.5" />
+      <module name="PlatformLibs-gpl-dependencies" target="1.5" />
+      <module name="PlatformLibs-own" target="1.5" />
+      <module name="PlatformLibs-own-gpl-dependencies" target="1.5" />
+      <module name="vecmath" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,5 @@
+JAVA_MIN_VERSION=1.8.0
+JAVA_MAX_VERSION=1.7.0
+JVM_OPTIONS_16=--add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.desktop/javax.swing=ALL-UNNAMED  --add-exports=java.desktop/sun.swing=ALL-UNNAMED
+CHOOSE_JAVA_EXE=LOWER_VERSION
+JAR=pdf2pgn-v1.20-SNAPSHOT-all.jar

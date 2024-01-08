@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2021 Francisco Javier Rojas Garrido <frojasg1@hotmail.com>
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3.0 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You may obtain a copy of the License at
+
+     http://www.gnu.org/licenses/lgpl-3.0.txt
+
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.frojasg1</groupId>
+	<artifactId>libScreenImage</artifactId>
+	<version>1.1</version>
+	<name>libScreenImage</name>
+
+	<description>Library that paints the contents of Java Components into a BufferedImage.</description>
+	<url>https://github.com/frojasg1/libScreenImage</url>
+
+	<organization>
+<!--		<url></url> -->
+		<name>Rob Camick</name>
+	</organization>
+	<inceptionYear>2008</inceptionYear>
+
+	<packaging>jar</packaging>
+
+	<licenses>
+		<license>
+			<name>GNU Lesser General Public License, Version 3</name>
+			<url>https://opensource.org/licenses/lgpl-3.0.html</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Rob Camick</name>
+<!--			<email></email> -->
+			<organization>Rob Camick</organization>
+<!--			<organizationUrl></organizationUrl>
+			<timezone>UTC+05:30</timezone> -->
+		</developer>
+	</developers>
+
+	<properties>
+		<version.slf4j>1.7.21</version.slf4j>
+		<version.velocity>1.7</version.velocity>
+		
+		<maven-clean-plugin.version>3.0.0</maven-clean-plugin.version>
+		<version.maven-compiler-plugin>3.6.0</version.maven-compiler-plugin>
+		<version.maven-surefire-plugin>2.19.1</version.maven-surefire-plugin>
+		<version.maven-resources-plugin>3.0.1</version.maven-resources-plugin>
+		<version.maven-source-plugin>3.0.1</version.maven-source-plugin>
+		<version.maven-javadoc-plugin>2.10.4</version.maven-javadoc-plugin>
+		<version.nexus-staging-maven-plugin>1.6.7</version.nexus-staging-maven-plugin>
+		<version.maven-release-plugin>2.5.3</version.maven-release-plugin>
+		<version.maven-scm-provider-gitexe>1.9.5</version.maven-scm-provider-gitexe>
+		<version.jacoco-maven-plugin>0.7.7.201606060606</version.jacoco-maven-plugin>
+		<version.coveralls-maven-plugin>4.3.0</version.coveralls-maven-plugin>
+		<version.maven-site-plugin>3.5.1</version.maven-site-plugin>
+		<version.reflow-velocity-tools>1.1.1</version.reflow-velocity-tools>
+		<version.maven-pmd-plugin>3.0.1</version.maven-pmd-plugin>
+		<version.findbugs-maven-plugin>3.0.1</version.findbugs-maven-plugin>
+		<version.maven-changelog-plugin>2.3</version.maven-changelog-plugin>
+		<version.taglist-maven-plugin>2.4</version.taglist-maven-plugin>
+		<version.maven-project-info-reports-plugin>2.8</version.maven-project-info-reports-plugin>
+		<version.maven-checkstyle-plugin>2.10</version.maven-checkstyle-plugin>
+		<version.cobertura-maven-plugin>2.6</version.cobertura-maven-plugin>
+		<version.maven-surefire-report-plugin>2.18.1</version.maven-surefire-report-plugin>
+		<version.maven-jxr-plugin>2.5</version.maven-jxr-plugin>
+		<version.maven-gpg-plugin>1.6</version.maven-gpg-plugin>
+		<version.maven-deploy-plugin>2.8.2</version.maven-deploy-plugin>
+		
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${version.slf4j}</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>${project.basedir}</directory>
+				<includes>
+					<include>NOTICE*</include>
+					<include>LICENSE*</include>
+				</includes>
+			</resource>
+		</resources>
+		<plugins>
+			<!-- Clean plugin -->
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>${maven-clean-plugin.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${version.maven-compiler-plugin}</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<source>1.8</source>
+					<target>1.8</target>
+					<showDeprecation>true</showDeprecation>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

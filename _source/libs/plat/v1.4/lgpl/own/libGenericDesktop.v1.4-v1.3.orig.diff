@@ -1,0 +1,274 @@
+diff -rb src/main/java/com/frojasg1/applications/common/components/resizecomp/ResizeRelocateItem.java /cygdrive/D/Fran/tmp/java/20190831.TextCrypt.v1.5/_source/libs/plat/v1.3/libGenericDesktop.v1.3/src/main/java/com/frojasg1/applications/common/components/resizecomp/ResizeRelocateItem.java
+97d96
+< 	public static final int FILL_WHOLE_PARENT = 65536;
+1115,1121d1113
+< 			if( isFlagActive( FILL_WHOLE_PARENT ) )
+< 			{
+< 				width = (int) parentBounds.getWidth();
+< 				height = (int) parentBounds.getHeight();
+< 			}
+< 			else
+< 			{
+1124c1116
+< 	/*				int delta = (int)(	parentBounds.getWidth() -
+---
+> /*				int delta = (int)(	parentBounds.getWidth() -
+1128c1120
+< 	*/
+---
+> */
+1138c1130
+< 	//					_component.setSize( width, (int) _component.getHeight() );
+---
+> //					_component.setSize( width, (int) _component.getHeight() );
+1149c1141
+< 	//					_component.setLocation( newX, (int) _component.getY() );
+---
+> //					_component.setLocation( newX, (int) _component.getY() );
+1161c1153
+< 	//					int rightBound = newX + _component.getWidth();
+---
+> //					int rightBound = newX + _component.getWidth();
+1174c1166
+< 	//						rightBound = newX + _originalWidth;
+---
+> //						rightBound = newX + _originalWidth;
+1184c1176
+< 	/*				int delta = (int) ( parentBounds.getHeight() -
+---
+> /*				int delta = (int) ( parentBounds.getHeight() -
+1188c1180
+< 	*/
+---
+> */
+1198c1190
+< 	//					_component.setSize( new Double( _component.getWidth() ).intValue(), new Double( _component.getHeight() ).intValue() + delta );
+---
+> //					_component.setSize( new Double( _component.getWidth() ).intValue(), new Double( _component.getHeight() ).intValue() + delta );
+1209c1201
+< 	//					_component.setLocation( (int) _component.getX(), newY );
+---
+> //					_component.setLocation( (int) _component.getX(), newY );
+1239d1230
+< 			}
+diff -rb src/main/java/com/frojasg1/general/desktop/combohistory/TextComboBoxHistory.java /cygdrive/D/Fran/tmp/java/20190831.TextCrypt.v1.5/_source/libs/plat/v1.3/libGenericDesktop.v1.3/src/main/java/com/frojasg1/general/desktop/combohistory/TextComboBoxHistory.java
+21,22d20
+< import com.frojasg1.applications.common.configuration.ConfigurationFunctions;
+< import com.frojasg1.applications.common.configuration.ConfigurationParent;
+25d22
+< import java.util.ArrayList;
+28d24
+< import java.util.List;
+40c36
+< 	protected List<JComboBox> _comboList = new ArrayList<>();
+---
+> 	protected JComboBox _combo;
+46,47d41
+< 	protected ConfigurationParent _conf = null;
+< 	protected String _baseConfigurationLabelName = null;
+49,58c43
+< 	public TextComboBoxHistory( int maxItemsToSave,
+< 								ConfigurationParent conf, String baseConfigurationLabelName )
+< 	{
+< 		this( maxItemsToSave );
+< 
+< 		_conf = conf;
+< 		_baseConfigurationLabelName = baseConfigurationLabelName;
+< 	}
+< 
+< 	public TextComboBoxHistory( int maxItemsToSave )
+---
+> 	public TextComboBoxHistory( JComboBox combo, int maxItemsToSave )
+59a45
+> 		_combo = combo;
+62,123c48
+< 	}
+< 
+< 	public void addCombo( JComboBox combo )
+< 	{
+< 		if( !_comboList.contains(combo) )
+< 		{
+< 			_comboList.add( combo );
+< 			combo.addActionListener( this );
+< 		}
+< 	}
+< 
+< 	protected String getIndexedItemLabelName( int index )
+< 	{
+< 		return( ConfigurationFunctions.instance().getIndexedItemLabelName( _baseConfigurationLabelName, index ) );
+< 	}
+< 
+< 	protected List<String> loadItems_internal()
+< 	{
+< 		if( _conf == null )
+< 		{
+< 			throw( new RuntimeException( "loadItems_internal:     _conf is null. It must be set, or loadItems_internal function must be overriden" ) );
+< 		}
+< 
+< 		List<String> result = new ArrayList<>();
+< 
+< 		int index=1;
+< 		String item = "";
+< 		String label;
+< 		do
+< 		{
+< 			label = getIndexedItemLabelName( index );
+< 			item = _conf.M_getStrParamConfiguration( label );
+< 			if( item != null )
+< 				result.add(item);
+< 			index++;
+< 		}
+< 		while( ( item != null ) && ( index <= _maxItemsToSave ) );
+< 
+< 		return( result );
+< 	}
+< 
+< 	public void loadItems()
+< 	{
+< 		List<String> list = loadItems_internal();
+< 
+< 		setCollectionOfItemsForCombo( list );
+< 	}
+< 
+< 	public void save()
+< 	{
+< 		if( _conf != null )
+< 		{
+< 			int index = 1;
+< 			for( String item: _vectorOfItems )
+< 			{
+< 				String label = this.getIndexedItemLabelName(index);
+< 				_conf.M_setStrParamConfiguration(label, item );
+< 				index++;
+< 			}
+< 		}
+< 		else
+< 			throw( new RuntimeException( "save function called and _conf is null. You must set _conf in the constructor or to override save function." ) );
+---
+> 		_combo.addActionListener( this );
+153,163d77
+< 		for( JComboBox combo: _comboList )
+< 		{
+< 			updateComboBox( vector, setSelectedElement, combo );
+< 		}
+< 
+< 		_modifiedByProgram = false;
+< 	}
+< 
+< 	protected void updateComboBox( Vector<String> vector, boolean setSelectedElement,
+< 									JComboBox combo )
+< 	{
+165c79
+< 		combo.setModel( dcbm );
+---
+> 		_combo.setModel( dcbm );
+169c83
+< 			combo.setSelectedIndex(0);
+---
+> 			_combo.setSelectedIndex(0);
+173c87
+< 			combo.getEditor().setItem("");
+---
+> 			_combo.getEditor().setItem("");
+174a89,90
+> 
+> 		_modifiedByProgram = false;
+215c131
+< 	public void newItemSelected( String newItem )
+---
+> 	protected void newItemSelected( String newItem )
+222,229d137
+< 		if( _comboList.size() != 1 )
+< 			throw( new RuntimeException( "_comboList did not have exactly 1 item, so we cannot infer which combo to use." ) );
+< 
+< 		saveCurrentItem( _comboList.get(0) );
+< 	}
+< 
+< 	protected void saveCurrentItem( JComboBox combo )
+< 	{
+232c140
+< 			ComboBoxModel<String> dcbm = combo.getModel();
+---
+> 			ComboBoxModel<String> dcbm = _combo.getModel();
+252c160
+< 			saveCurrentItem( (JComboBox) e.getSource() );
+---
+> 			saveCurrentItem();
+256,268d163
+< 	protected void removeListeners()
+< 	{
+< 		for( JComboBox combo: _comboList )
+< 		{
+< 			combo.removeActionListener(this);
+< 		}
+< 	}
+< 
+< 	public void dispose()
+< 	{
+< 		removeListeners();
+< 		_comboList.clear();
+< 	}
+Sólo en src/main/java/com/frojasg1/general/desktop/view: combobox
+diff -rb src/main/java/com/frojasg1/general/desktop/view/panels/AcceptCancelPanel.java /cygdrive/D/Fran/tmp/java/20190831.TextCrypt.v1.5/_source/libs/plat/v1.3/libGenericDesktop.v1.3/src/main/java/com/frojasg1/general/desktop/view/panels/AcceptCancelPanel.java
+23d22
+< import static com.frojasg1.applications.common.components.resizecomp.ResizeRelocateItem.FILL_WHOLE_PARENT;
+94c93,94
+< 			mapRRCI.putResizeRelocateComponentItem( jPanel1, ResizeRelocateItem.FILL_WHOLE_PARENT );
+---
+> 			mapRRCI.putResizeRelocateComponentItem( jPanel1, ResizeRelocateItem.RESIZE_TO_RIGHT +
+> 															ResizeRelocateItem.RESIZE_TO_BOTTOM );
+diff -rb src/main/java/com/frojasg1/general/desktop/view/panels/AcceptCancelRevertPanel.java /cygdrive/D/Fran/tmp/java/20190831.TextCrypt.v1.5/_source/libs/plat/v1.3/libGenericDesktop.v1.3/src/main/java/com/frojasg1/general/desktop/view/panels/AcceptCancelRevertPanel.java
+23d22
+< import static com.frojasg1.applications.common.components.resizecomp.ResizeRelocateItem.FILL_WHOLE_PARENT;
+94c93,94
+< 			mapRRCI.putResizeRelocateComponentItem( jPanel1, ResizeRelocateItem.FILL_WHOLE_PARENT );
+---
+> 			mapRRCI.putResizeRelocateComponentItem( jPanel1, ResizeRelocateItem.RESIZE_TO_RIGHT +
+> 															ResizeRelocateItem.RESIZE_TO_BOTTOM );
+diff -rb src/main/java/com/frojasg1/general/desktop/view/search/DesktopSearchAndReplaceWindow.java /cygdrive/D/Fran/tmp/java/20190831.TextCrypt.v1.5/_source/libs/plat/v1.3/libGenericDesktop.v1.3/src/main/java/com/frojasg1/general/desktop/view/search/DesktopSearchAndReplaceWindow.java
+166,169c166,167
+< 		_comboBoxHistoryForSearchCB = new TextComboBoxHistory( maxItems );
+< 		_comboBoxHistoryForSearchCB.addCombo( jCB_search );
+< 		_comboBoxHistoryForReplaceCB = new TextComboBoxHistory( maxItems );
+< 		_comboBoxHistoryForReplaceCB.addCombo( jCB_replaceFor );
+---
+> 		_comboBoxHistoryForSearchCB = new TextComboBoxHistory( jCB_search, maxItems );
+> 		_comboBoxHistoryForReplaceCB = new TextComboBoxHistory( jCB_replaceFor, maxItems );
+819,824d816
+< 	protected void removeListeners()
+< 	{
+< 		_comboBoxHistoryForSearchCB.dispose();
+< 		_comboBoxHistoryForReplaceCB.dispose();
+< 	}
+< 
+833,835d824
+< 		if( close )
+< 			removeListeners();
+< 
+diff -rb src/main/java/com/frojasg1/general/desktop/view/zoom/ui/ZoomMetalFileChooserUI.java /cygdrive/D/Fran/tmp/java/20190831.TextCrypt.v1.5/_source/libs/plat/v1.3/libGenericDesktop.v1.3/src/main/java/com/frojasg1/general/desktop/view/zoom/ui/ZoomMetalFileChooserUI.java
+39,41c39
+<     protected ZoomAcceptAllFileFilterLocale zoomAcceptAllFileFilterLocale = new ZoomAcceptAllFileFilterLocale();
+< 
+< 	protected JFileChooser _jFileChooser = null;
+---
+>     protected AcceptAllFileFilterLocale acceptAllFileFilterLocale = new AcceptAllFileFilterLocale();
+46,47d43
+< 
+< 		_jFileChooser = jfc;
+53c49
+< 		return( zoomAcceptAllFileFilterLocale );
+---
+> 		return( acceptAllFileFilterLocale );
+93c89
+<     protected class ZoomAcceptAllFileFilterLocale extends FileFilter {
+---
+>     protected class AcceptAllFileFilterLocale extends FileFilter {
+95c91
+<         public ZoomAcceptAllFileFilterLocale() {
+---
+>         public AcceptAllFileFilterLocale() {
+103c99
+<             return UIManager.getString("FileChooser.acceptAllFileFilterText", _jFileChooser.getLocale() );
+---
+>             return UIManager.getString("FileChooser.acceptAllFileFilterText", JComponent.getDefaultLocale() );
+Sólo en src: src

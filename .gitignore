@@ -1,0 +1,8 @@
+# Project exclude paths
+/_source/apps/chess/v1.20/ChessPDFbrowser/target/
+/_source/apps/chess/v1.20/ChessPDFbrowser_main/target/
+/_source/apps/chess/v1.20/pdf2pgn/target/
+/_source/libs/chess/v1.20/libChess/target/
+/_source/libs/chess/v1.20/libChessBoardRecognition/target/
+/_source/libs/chess/v1.20/libChessEngineWrapper/target/
+/_source/libs/chess/v1.20/libPdfInputElement/target/
