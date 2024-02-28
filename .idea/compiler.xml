@@ -20,8 +20,8 @@
         <module name="j3dcore" />
         <module name="libChess" />
         <module name="lib3Dapi" />
-        <module name="libJerseyInetQuery" />
         <module name="libTableColumnAdjuster" />
+        <module name="libJerseyInetQuery" />
         <module name="lib3D" />
         <module name="libGenericCommandLine" />
         <module name="libPdfboxWrapper" />
