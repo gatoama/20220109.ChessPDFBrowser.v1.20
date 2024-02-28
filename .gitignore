@@ -6,3 +6,7 @@
 /_source/libs/chess/v1.20/libChessBoardRecognition/target/
 /_source/libs/chess/v1.20/libChessEngineWrapper/target/
 /_source/libs/chess/v1.20/libPdfInputElement/target/
+/.idea/
+/_binary/
+/*.iml
+/*.xml
